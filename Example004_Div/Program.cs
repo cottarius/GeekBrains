@@ -1,6 +1,11 @@
-﻿double Div(double a, double b)
+﻿double Div()
 {
-    return a / b;
+    double numberA = new Random().Next(10, 20);
+    Console.WriteLine(numberA);
+    double numberB = new Random().Next(2, 4);
+    Console.WriteLine(numberB);
+    return numberA / numberB;
 }
 
-Console.WriteLine(Div(12, 5));
+
+Console.WriteLine(Div());
