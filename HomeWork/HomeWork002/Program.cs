@@ -1,4 +1,4 @@
-﻿//самый лаконичный вариант
+﻿//Посложнее
 string Max(int a, int b) => (a > b) ? $"max = {a}" : $"max = {b}"; 
 
 int number, number2;
