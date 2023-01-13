@@ -1,5 +1,5 @@
-﻿//Посложнее
-string Max(int a, int b) => (a > b) ? $"max = {a}" : $"max = {b}"; 
+﻿//С функцией
+string Max(int a, int b) => (a > b) ? $"max = {a}, min = {b}" : $"max = {b}, min = {a}"; 
 
 int number, number2;
 System.Console.Write("Введите первое число: ");
@@ -16,7 +16,7 @@ System.Console.WriteLine(Max(number, number2));
 
 System.Console.WriteLine();
 
-//простой вариант
+//Без функции
 int numberA, numberB;
 System.Console.Write("Введите первое число: ");
 while(!Int32.TryParse(Console.ReadLine(), out numberA))

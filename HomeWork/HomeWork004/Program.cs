@@ -1,4 +1,4 @@
-﻿//посложнее
+﻿//С функцией
 int MaxNumber(List<int> list) => list.Max();
 
 List<int> list = new List<int>();
@@ -12,7 +12,7 @@ list.Add(Convert.ToInt32(Console.ReadLine()));
 
 Console.WriteLine(MaxNumber(list));
 
-//полегче
+//Без функции
 Console.Write("Введите первое число: ");
 int numberA = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: ");
