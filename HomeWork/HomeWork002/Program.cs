@@ -42,5 +42,4 @@ else
 {
     System.Console.WriteLine("Числа равны");
 }
-System.Console.WriteLine();
 Console.ReadKey();
