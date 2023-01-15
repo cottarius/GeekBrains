@@ -42,4 +42,3 @@ else
 {
     System.Console.WriteLine("Числа равны");
 }
-Console.ReadKey();
