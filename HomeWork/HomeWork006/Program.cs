@@ -14,7 +14,7 @@ System.Console.WriteLine();
 //Без функции:
 int numb;
 System.Console.Write("Введите целое число: ");
-while(!Int32.TryParse(Console.ReadLine(), out number))
+while(!Int32.TryParse(Console.ReadLine(), out numb))
 {
     System.Console.Write("Некорректный ввод! Введите целое число: ");
 }
