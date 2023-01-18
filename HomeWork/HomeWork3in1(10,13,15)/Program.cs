@@ -143,7 +143,7 @@
         {
             System.Console.WriteLine("Будний день");
         }
-        else if(dayNumber >= 6 && dayNumber <= 8)
+        else if(dayNumber >= 6 && dayNumber <= 7)
         {
             System.Console.WriteLine("Выходной день");
         }
