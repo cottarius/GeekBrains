@@ -3,7 +3,7 @@ Palyndrome palyndrome1 = new Palyndrome(14212);
 palyndrome1.PrintResult();
 
 Palyndrome palyndrome2 = new Palyndrome();
-palyndrome2.SetPolyndrom();
+palyndrome2.SetPalyndrome();
 palyndrome2.PrintResult();
 
 class Palyndrome
@@ -17,7 +17,7 @@ class Palyndrome
         Number = number;
         Name = number.ToString();
     }
-    public Palyndrome SetPolyndrom()
+    public Palyndrome SetPalyndrome()
     {
         Palyndrome polyndrom = new Palyndrome();
         System.Console.Write("Введите целое пятизначное число: ");
