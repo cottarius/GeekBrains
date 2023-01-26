@@ -30,8 +30,7 @@ namespace HomeWork3in1_25_27_29_
                 while (!int.TryParse(Console.ReadLine(), out array[count]))
                 {
                     Console.Write("Ошибка ввода! Введите целое число: ");
-                }
-                array[count] = Math.Abs(array[count]);
+                }                
             }
             return array;
         }
