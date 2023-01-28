@@ -17,9 +17,8 @@ class Palyndrome
         Number = number;
         Name = number.ToString();
     }
-    public Palyndrome SetPalyndrome()
-    {
-        Palyndrome polyndrom = new Palyndrome();
+    public void SetPalyndrome()
+    {        
         System.Console.Write("Введите целое пятизначное число: ");
         int number;
         while (!int.TryParse(Console.ReadLine(), out number) || !(Math.Abs(number) > 9999) || !(Math.Abs(number) < 100000))
@@ -27,8 +26,7 @@ class Palyndrome
             System.Console.Write("Ошибка! Введите целое пятизначное число: ");
         }
         Number = number;
-        Name = number.ToString();
-        return polyndrom;        
+        Name = number.ToString();        
     }
     private bool IsPalyndrome()
     {
