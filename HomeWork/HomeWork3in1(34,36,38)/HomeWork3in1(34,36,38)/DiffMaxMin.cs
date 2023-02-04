@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork3in1_34_36_38_
 {
-    class DiffMaxMin
+    internal class DiffMaxMin
     {
         int[] Array { get; set; }
         Random random = new Random();
@@ -32,11 +32,11 @@ namespace HomeWork3in1_34_36_38_
         }
 
         public int DiffBetweenMaxMin()
-        {            
+        {
             int maxElement = Array[0], minElement = Array[0];
 
             for (int i = 0; i < Array.Length; i++)
-            {                
+            {
                 if (Array[i] > maxElement)
                 {
                     maxElement = Array[i];
@@ -51,11 +51,11 @@ namespace HomeWork3in1_34_36_38_
             Console.WriteLine($"Максимальный элемент: {maxElement}");
             Thread.Sleep(2000);
             Console.WriteLine($"Минимальный элемент: {minElement}");
-            Thread.Sleep(2000);            
+            Thread.Sleep(2000);
             Console.Write("Разница между максимальным и минимальным элементами: ");
-            Thread.Sleep(2000);            
+            Thread.Sleep(2000);
             return maxElement - minElement;
-            
+
         }
 
         public void PrintArray()

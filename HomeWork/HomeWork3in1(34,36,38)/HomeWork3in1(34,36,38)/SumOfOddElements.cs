@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace HomeWork3in1_34_36_38_
 {
-    class SumOfOddElements
+    internal class SumOfOddElements
     {
         int[] Array { get; set; }
         Random random = new Random();
-        public SumOfOddElements() 
-        {           
+        public SumOfOddElements()
+        {
             Console.WriteLine("Ладно... Следующая задача...");
             Thread.Sleep(1000);
             Console.WriteLine("Создаю очередной массив...");
@@ -42,7 +42,7 @@ namespace HomeWork3in1_34_36_38_
         public int GetSumOfOdd()
         {
             int sum = 0;
-            for(int i = 1; i < Array.Length; i+=2)
+            for (int i = 1; i < Array.Length; i += 2)
             {
                 sum += Array[i];
             }

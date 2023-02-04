@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace HomeWork3in1_34_36_38_
 {
-    class EvenCount
+    internal class EvenCount
     {
         int[] Array { get; set; }
         Random random = new Random();
 
         public EvenCount()
-        {    
+        {
             Console.WriteLine("Создаю массив...");
             Thread.Sleep(1000);
             Console.WriteLine("Удачно!");
@@ -24,7 +24,7 @@ namespace HomeWork3in1_34_36_38_
 
             int number = random.Next(1, 20);
             Array = new int[number];
-            for(int i = 0; i < Array.Length; i++) 
+            for (int i = 0; i < Array.Length; i++)
             {
                 Array[i] = random.Next(100, 1000);
             }
@@ -36,7 +36,7 @@ namespace HomeWork3in1_34_36_38_
             for (int i = 0; i < Array.Length; i++)
             {
                 Console.Write($"{Array[i]}");
-                if (i < Array.Length- 1)
+                if (i < Array.Length - 1)
                 {
                     Console.Write(", ");
                 }
@@ -58,7 +58,7 @@ namespace HomeWork3in1_34_36_38_
         {
             int count = 0;
             for (int i = 0; i < Array.Length; i++)
-            {                
+            {
                 if (Array[i] % 2 == 0)
                 {
                     count++;
@@ -66,7 +66,7 @@ namespace HomeWork3in1_34_36_38_
             }
             //Console.WriteLine("Ушёл в ребут...");
             return count;
-            
+
         }
     }
 }
