@@ -104,13 +104,12 @@ void GetIndexValue(int[,] matrix)
 
     Console.WriteLine("Введите координаты элемента матрицы: ");
     Console.Write("Введите координату строки: ");
-    while (!int.TryParse(Console.ReadLine(), out rowIndex))
+    while (!int.TryParse(Console.ReadLine(), out rowIndex) || rowIndex < 0)
     {
         Console.Write("Ошибка! Введите целое число: ");
-    }
-    if (rowIndex < 0) rowIndex *= -1;
+    }    
     Console.Write("Введите координату столбца: ");
-    while (!int.TryParse(Console.ReadLine(), out columnIndex))
+    while (!int.TryParse(Console.ReadLine(), out columnIndex) || rowIndex < 0)
     {
         Console.Write("Ошибка! Введите целое число: ");
     }
