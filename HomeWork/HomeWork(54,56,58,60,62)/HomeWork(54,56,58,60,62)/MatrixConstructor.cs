@@ -13,6 +13,34 @@ namespace Matrix_Constructor
         static int[,,]? Matrix3d { get; set; }
         static Random random = new Random();
 
+        public static int[,] CreateSpiralMatrix(int rowLength, int columnLength)
+        {
+            IntMatrix = new int[rowLength, columnLength];
+            int row = 0;
+            int col = 0;
+            int dx = 1;
+            int dy = 0;
+            int dirChanges = 0;
+            int visits = columnLength;
+
+            for (int i = 0; i < IntMatrix.Length; i++)
+            {
+                IntMatrix[row, col] = i + 1;
+                if (--visits == 0)
+                {
+                    visits = columnLength * (dirChanges % 2) + rowLength * ((dirChanges + 1) % 2) - (dirChanges / 2 - 1) - 2;
+                    int temp = dx;
+                    dx = -dy;
+                    dy = temp;
+                    dirChanges++;
+                }
+
+                col += dx;
+                row += dy;
+            }
+            return IntMatrix;
+        }
+
         public static int[,,] CreateMatrix3d(int rowLength, int columnLength, int deepLength, int randomA, int randomB)
         {            
             Matrix3d = new int[rowLength, columnLength, deepLength];
@@ -128,7 +156,7 @@ namespace Matrix_Constructor
             {
                 for (int j = 0; j < IntMatrix.GetLength(1); j++)
                 {
-                    Console.Write($"{IntMatrix[i, j]} ");
+                    Console.Write($"{IntMatrix[i, j], -3}");
                 }
                 Console.WriteLine();
             }
@@ -164,7 +192,8 @@ namespace Matrix_Constructor
                 }
             }
             return matrixC;
-        }
+        }        
+
         public static void PrintMatrix(double[,] matrix)
         {
             DoubleMatrix = matrix;
