@@ -112,8 +112,7 @@ void GetIndexValue(int[,] matrix)
     while (!int.TryParse(Console.ReadLine(), out columnIndex) || rowIndex < 0)
     {
         Console.Write("Ошибка! Введите целое число: ");
-    }
-    if (columnIndex < 0) columnIndex *= -1;
+    }    
 
     if (rowIndex > matrix.GetLength(0) - 1 || columnIndex > matrix.GetLength(1) - 1)
     {
