@@ -10,12 +10,12 @@ int Fibonacci(int n)
     else return Fibonacci(n - 1) + Fibonacci(n - 2);
 }
 
-for (int i = 0; i < 3; i++)
+for (int i = 1; i < 5; i++)
 {
     System.Console.WriteLine($"{i}! = {Factorial(i)}");
 }
 
-for (int i = 1; i < 10; i++)
+for (int i = 1; i < 11; i++)
 {
     System.Console.WriteLine(Fibonacci(i));
 }
