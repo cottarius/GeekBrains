@@ -17,14 +17,14 @@ int RecurtionSumAtoB(int a, int b)
     return b + RecurtionSumAtoB(a, b - 1);
 }
 
-double AckermannFunc(double m, double n)
+int AckermannFunc(int m, int n)
 {
     if (m == 0) return n + 1;
     else if (n == 0 && m != 0) return AckermannFunc(m - 1, 1);
     else return AckermannFunc(m - 1, AckermannFunc(m, n - 1));
 }
 
-Console.WriteLine("***HomeWork064***");
+Console.WriteLine("***HomeWork064 - Натуральные числа в промежутке от N до 1***");
 int N = 0;
 Console.Write("Введите натуральное число: ");
 while(!int.TryParse(Console.ReadLine(), out N) || N < 0)
@@ -35,7 +35,7 @@ Console.WriteLine($"Натуральные числа в промежутке о
 
 Console.WriteLine();
 
-Console.WriteLine("***HomeWork066***");
+Console.WriteLine("***HomeWork066 - Сумма натуральных элементов от [А до В]***");
 int A, B;
 Console.Write("Введите первое натуральное число: ");
 while (!int.TryParse(Console.ReadLine(), out A) || A < 0)
@@ -51,15 +51,15 @@ Console.WriteLine($"Сумма натуральных элементов от {A
 
 Console.WriteLine();
 
-Console.WriteLine("***HomeWork068***");
-double m, n;
+Console.WriteLine("***HomeWork068 - Функция Аккермана***");
+int m, n;
 Console.Write("Введите первое натуральное число: ");
-while (!double.TryParse(Console.ReadLine(), out m) || m < 0)
-{
+while (!int.TryParse(Console.ReadLine(), out m) || m < 0)
+{    
     Console.Write("Ошибка! Введите целое положительное число : ");
 }
 Console.Write("Введите второе натуральное число: ");
-while (!double.TryParse(Console.ReadLine(), out n) || n < 0)
+while (!int.TryParse(Console.ReadLine(), out n) || n < 0)
 {
     Console.Write("Ошибка! Введите целое положительное число : ");
 }
