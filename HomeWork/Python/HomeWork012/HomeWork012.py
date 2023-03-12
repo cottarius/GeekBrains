@@ -4,8 +4,18 @@
 
 sum = int(input("Введите сумму двух чисел: "))
 mult = int(input("Введите произведение двух чисел: "))
-limit = 1000
+limit = 5
+flag = True
 for i in range(limit):
     for j in range(limit):
         if i * j == mult and i + j == sum:
             print(f"Первое число: {i}, второе число: {j}")
+            flag = False
+            break
+    if not flag:
+        break
+
+if flag:
+    print("Таких пар чисел нет")
+
+
