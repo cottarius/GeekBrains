@@ -1,4 +1,4 @@
-/*
+package src;/*
 Дана json строка [{ "фамилия":"Иванов","оценка":"5","предмет":"Математика"},{"фамилия":"Петрова","оценка":"4",
 "предмет":"Информатика"},{"фамилия":"Краснов","оценка":"5","предмет":"Физика"}]
 Задача написать метод(ы), который распарсит строку и выдаст ответ вида:
@@ -46,7 +46,7 @@ public class Main {
 
     static void saveToFile(String s) {
         String path = "file.txt";
-        try (FileWriter fWriter = new FileWriter(path, true)) {
+        try (FileWriter fWriter = new FileWriter(path, false)) {
             fWriter.append(s);
             fWriter.append("\n");
             fWriter.flush();
