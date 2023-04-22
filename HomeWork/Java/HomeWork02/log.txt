@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-04-22T15:36:03.936548300Z</date>
+  <millis>1682177763936</millis>
+  <nanos>548300</nanos>
+  <sequence>0</sequence>
+  <level>WARNING</level>
+  <class>src.Main</class>
+  <method>saveToFile</method>
+  <thread>1</thread>
+  <message>\n\nfile.txt (Системе не удается найти указанный путь)</message>
+</record>
+</log>

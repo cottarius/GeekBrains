@@ -20,6 +20,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Main {
     public static void main(String[] args) {
@@ -45,6 +48,14 @@ public class Main {
     }
 
     static void saveToFile(String s) {
+        Logger logger = Logger.getAnonymousLogger();
+        FileHandler fileHandler = null;
+        try {
+            fileHandler = new FileHandler("log.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        logger.addHandler(fileHandler);
         String path = "file.txt";
         try (FileWriter fWriter = new FileWriter(path, false)) {
             fWriter.append(s);
@@ -52,7 +63,9 @@ public class Main {
             fWriter.flush();
         } catch (IOException e) {
             e.printStackTrace();
+            logger.log(Level.WARNING, e.getMessage());
         }
+        fileHandler.close();
     }
 }
 class Student {
