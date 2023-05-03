@@ -5,7 +5,6 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         ex0();
-        System.out.println();
         ex1();
     }
     static void ex0(){
