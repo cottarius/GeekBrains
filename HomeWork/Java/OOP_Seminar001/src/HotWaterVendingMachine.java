@@ -9,6 +9,11 @@ public class HotWaterVendingMachine implements VendingMachine{
     }
     @Override
     public Product getProduct() {
-        return hotWaters.pop();
+        if(!hotWaters.isEmpty()){
+            return hotWaters.pop();
+        }
+        else {
+            return null;
+        }
     }
 }
