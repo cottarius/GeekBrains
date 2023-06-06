@@ -1,6 +1,6 @@
-public class HotWater extends Product{
-    int temperature;
-    public HotWater(String name, int price, int temperature) {
+public class HotWater extends Product implements Comparable<Product>{
+    public Long temperature;
+    public HotWater(String name, int price, long temperature) {
         super(name, price);
         this.temperature = temperature;
     }
@@ -20,10 +20,10 @@ public class HotWater extends Product{
     public void setPrice(int price) {
         super.price = price;
     }
-    public int getTemperature() {
+    public long getTemperature() {
         return this.temperature;
     }
-    public void setTemperature(int temperature) {
+    public void setTemperature(Long temperature) {
         this.temperature = temperature;
     }
     @Override
@@ -33,5 +33,10 @@ public class HotWater extends Product{
                 ", price=" + price +
                 ", temperature=" + temperature +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Product o) {
+        return this.temperature.compareTo(((HotWater) (o)).temperature);
     }
 }

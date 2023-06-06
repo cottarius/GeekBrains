@@ -1,4 +1,4 @@
-public abstract class Product {
+public abstract class Product{
     /*
     Реализуйте класс Товар, содержащий данные о товаре, и ТорговыйАвтомат, содержащий в себе методы initProducts
     (List<Product>), сохраняющий в себе список исходных продуктов и getProducts(String name)
@@ -15,5 +15,4 @@ public abstract class Product {
     public abstract void setName(String name);
     public abstract int getPrice();
     public abstract void setPrice(int price);
-
 }
