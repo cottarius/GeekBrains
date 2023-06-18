@@ -9,8 +9,18 @@
       <sourceFolder url="file://$MODULE_DIR$/OOP_Lesson04_Kamyanetskiy" isTestSource="false" packagePrefix="Lesson_10" />
       <sourceFolder url="file://$MODULE_DIR$/OOP_Lesson05" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OOP_Seminar005_02" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OOP_Seminar006" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/24.0.0/annotations-24.0.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
