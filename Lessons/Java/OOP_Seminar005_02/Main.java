@@ -24,11 +24,19 @@ public class Main {
         StudyGroup group2 = controller.createGroup(americanGroup, teacher2);
         controller.read(group2);
 
-        controller.createRoom(101, russianGroup);
+        StudentResidence room101;
+        room101 = controller.createRoom(101, russianGroup);
+
+        StudentResidence room102;
+        room102 = controller.createRoom(102, americanGroup);
 
 
-        controller.createRoom(102, americanGroup);
-        controller.getRooms();
+        List<StudentResidence> rooms = new ArrayList<>();
+        rooms.add(room101);
+        rooms.add(room102);
 
+        for (StudentResidence room : rooms){
+            controller.getRoom(room);
+        }
     }
 }

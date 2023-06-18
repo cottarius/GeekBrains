@@ -13,9 +13,7 @@ public class StudentResidence {
     private int roomNumber;
     private List<Student> list;
 
-    public StudentResidence() {
-        this.list = new ArrayList<>();
-    }
+    public StudentResidence() { this.list = new ArrayList<>(); }
 
     public int getRoomNumber() {
         return roomNumber;
@@ -31,5 +29,13 @@ public class StudentResidence {
 
     public void setList(List<Student> list) {
         this.list = list;
+    }
+
+    @Override
+    public String toString() {
+        return "StudentResidence{" +
+                "roomNumber=" + roomNumber +
+                ", list=" + list +
+                '}';
     }
 }

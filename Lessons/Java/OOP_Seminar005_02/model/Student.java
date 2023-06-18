@@ -9,6 +9,10 @@ public class Student extends User{
         this.studentId = idGenerator++;
     }
 
+    public Integer getStudentId() {
+        return studentId;
+    }
+
     @Override
     public String toString() {
         return studentId + " " + super.toString();

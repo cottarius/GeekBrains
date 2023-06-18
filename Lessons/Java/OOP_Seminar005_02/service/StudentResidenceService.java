@@ -1,6 +1,7 @@
 package service;
 
 import model.Student;
+import model.StudentResidence;
 
 import java.util.List;
 import java.util.Map;
@@ -14,6 +15,6 @@ import java.util.Map;
  */
 
 public interface StudentResidenceService {
-    public Map<Integer, List<Student>> createRoom (int number, List<Student> list);
-    public void getRooms();
+    public StudentResidence createRoom (int number, List<Student> students);
+    public void getRoom(StudentResidence room);
 }
