@@ -1,12 +1,7 @@
 import controller.Controller;
-import model.Disciple;
-import model.Student;
-import model.StudyGroup;
-import model.Teacher;
+import model.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -28,6 +23,12 @@ public class Main {
         controller.read(group1);
         StudyGroup group2 = controller.createGroup(americanGroup, teacher2);
         controller.read(group2);
+
+        controller.createRoom(101, russianGroup);
+
+
+        controller.createRoom(102, americanGroup);
+        controller.getRooms();
 
     }
 }
