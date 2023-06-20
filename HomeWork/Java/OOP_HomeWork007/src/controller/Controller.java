@@ -1,14 +1,12 @@
 package controller;
 
-import complex.model.Complex;
-import complex.model.ComplexAddition;
-import complex.model.ComplexOperation;
-import complex.model.ComplexSubstraction;
+import complex.model.*;
+import complex.service.*;
 import view.View;
 
 public class Controller {
     View view;
-    //ComplexOperation complexOperation;
+
 
     public Controller(View view) {
         this.view = view;
@@ -25,6 +23,16 @@ public class Controller {
             }
             case '-' -> {
                 ComplexOperation complexOperation = new ComplexSubstraction();
+                Complex result = complexOperation.mathOperation(c1, c2);
+                complexOperation.print(result);
+            }
+            case '*' -> {
+                ComplexOperation complexOperation = new ComplexMultiplication();
+                Complex result = complexOperation.mathOperation(c1, c2);
+                complexOperation.print(result);
+            }
+            case '/' -> {
+                ComplexOperation complexOperation = new ComplexDivision();
                 Complex result = complexOperation.mathOperation(c1, c2);
                 complexOperation.print(result);
             }

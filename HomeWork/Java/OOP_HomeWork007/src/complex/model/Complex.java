@@ -25,8 +25,14 @@ public class Complex {
         this.im = im;
     }
 
-    @Override
-    public String toString() {
-        return "Re: " + re + " Im: " + im;
+    public void print() {
+        if(im > 0){
+            System.out.println(re + " + " + im + "i");
+        } else if (im < 0) {
+            System.out.println(re + "" + im + "i");
+        } else {
+            System.out.println(re);
+        }
+
     }
 }
