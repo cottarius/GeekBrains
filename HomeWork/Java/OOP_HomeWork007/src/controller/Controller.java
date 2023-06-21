@@ -1,20 +1,32 @@
 package controller;
 
-import complex.model.*;
-import complex.service.*;
+
+import model.complex.Complex;
+import service.*;
 import view.View;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Controller {
-    View view;
-
+    private View view;
+    private Logger logger;
     public Controller(View view) {
         this.view = view;
     }
-
     public void buttonClick() {
         try {
+            logger = Logger.getAnonymousLogger();
+            FileHandler fileHandler = null;
+            try {
+                fileHandler = new FileHandler("log.txt", true);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            logger.addHandler(fileHandler);
             Complex c1 = new Complex(view.inputValue("Re: "), view.inputValue("Im: "));
             char operation = view.inputOperationSign("Operation Sign: ");
             Complex c2 = new Complex(view.inputValue("Re: "), view.inputValue("Im: "));
@@ -23,6 +35,10 @@ public class Controller {
                     ComplexOperation complexOperation = new ComplexAddition();
                     Complex result = complexOperation.mathOperation(c1, c2);
                     complexOperation.print(result);
+                    String msg = (c1.toString() + " + " + c2.toString() + " = " + result.toString());
+                    //logger.info(msg);
+                    logger.log(Level.INFO, msg);
+
                 }
                 case '-' -> {
                     ComplexOperation complexOperation = new ComplexSubstraction();
@@ -40,7 +56,9 @@ public class Controller {
                     complexOperation.print(result);
                 }
                 default -> throw new IllegalStateException("Unexpected value: " + operation);
+
             }
+            fileHandler.close();
         }
         catch (InputMismatchException ex){
             System.out.println("Введены некорректные данные!");

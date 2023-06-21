@@ -1,4 +1,4 @@
-package complex.model;
+package model.complex;
 
 public class Complex {
     private double re;
@@ -33,6 +33,10 @@ public class Complex {
         } else {
             System.out.println(re);
         }
+    }
 
+    @Override
+    public String toString() {
+        return "{" + "re=" + re + ", im=" + im + '}';
     }
 }

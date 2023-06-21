@@ -1,6 +1,6 @@
-package complex.service;
+package service;
 
-import complex.model.Complex;
+import model.complex.Complex;
 
 public class ComplexDivision implements ComplexOperation {
     @Override

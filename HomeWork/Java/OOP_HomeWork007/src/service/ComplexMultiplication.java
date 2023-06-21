@@ -1,7 +1,6 @@
-package complex.service;
+package service;
 
-import complex.model.Complex;
-import complex.service.ComplexOperation;
+import model.complex.Complex;
 
 public class ComplexMultiplication implements ComplexOperation {
     @Override
