@@ -18,7 +18,7 @@ public class Main {
         Random rand = new Random();
         int[] array = new int[arrayLength];
         for (int i = 0; i < array.length; i++) {
-            array[i] = rand.nextInt(0, 10);
+            array[i] = rand.nextInt(10);
         }
         return array;
     }
