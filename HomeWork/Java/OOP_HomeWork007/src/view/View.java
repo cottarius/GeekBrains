@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class View {
     Scanner in = new Scanner(System.in);
-    public double getValue(String title){
+    public double inputValue(String title){
         System.out.printf("%s", title);
         return in.nextDouble();
     }
-    public char getOperationSign(String title){
+    public char inputOperationSign(String title){
         System.out.printf("%s", title);
         return in.next(".").charAt(0);
     }
