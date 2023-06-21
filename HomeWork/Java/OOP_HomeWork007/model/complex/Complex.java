@@ -37,6 +37,6 @@ public class Complex {
 
     @Override
     public String toString() {
-        return "{" + "re=" + re + ", im=" + im + '}';
+        return "{" + "Re: " + re + ", Im: " + im + '}';
     }
 }
