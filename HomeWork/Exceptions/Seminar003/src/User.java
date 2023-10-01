@@ -5,10 +5,10 @@ public class User {
     private String firstName;
     private String patronymic;
     private Date born;
-    private String phone;
+    private long phone;
     private String gender;
 
-    public User(String lastName, String firstName, String patronymic, Date born, String phone, String gender) {
+    public User(String lastName, String firstName, String patronymic, Date born, long phone, String gender) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.patronymic = patronymic;
@@ -52,11 +52,11 @@ public class User {
         this.born = born;
     }
 
-    public String getPhone() {
+    public long getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone(long phone) {
         this.phone = phone;
     }
 

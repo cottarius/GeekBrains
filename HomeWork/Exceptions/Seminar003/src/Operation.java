@@ -55,9 +55,9 @@ public class Operation {
         } catch (ParseException ex) {
             throw new ParseException("Неверный формат даты рождения", ex.getErrorOffset());
         }
-        String phone;
+        int phone;
         try {
-            phone = splitArray[4];
+            phone = Integer.parseInt(splitArray[4]);
         } catch (NumberFormatException e) {
             throw new NumberFormatException("Неверный формат телефона");
         }
