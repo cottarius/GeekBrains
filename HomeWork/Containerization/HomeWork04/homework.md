@@ -1,8 +1,12 @@
 1. Создаём в хостовой машине папку для хранения базы данных. Полный путь к ней: /home/cotarius/db1
 ![](create_dir_of_db.png)
-2. Запускаем контейнер mariadb с параметрами как на скриншоте и проверяем его работу командой:
+2. Запускаем контейнер mariadb с параметрами как на скриншоте: 
 
-      *docker ps*
+      *sudo docker run --name maria-db-container-1 -d -v /home/cotarius/db1:/var/lib/mysql -e MARIADB_ROOT_PASSWORD=test123 mariadb:10.10.2*
+
+    и проверяем его работу командой:
+
+    *docker ps*
 
     ![](run_mariadb.png)
 3. Заходим в контейнер с помощью команды:
