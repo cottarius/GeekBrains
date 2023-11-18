@@ -1,6 +1,7 @@
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 
@@ -30,9 +31,9 @@ public class Main {
         System.out.println("------------------------------------------");
 
         HotWaterVendingMachine hwvm = new HotWaterVendingMachine();
-        HotWater nescafe = new HotWater("Nescafe", 50, 80);
+        HotWater nescafe = new HotWater("нескафе", 50, 80);
         HotWater jacobs = new HotWater("Jacobs", 45, 85);
-        HotWater greenfield = new HotWater("Greenfield", 55, 90);
+        HotWater greenfield = new HotWater("гринфилд", 55, 90);
         LinkedList<Product> hotWaters = new LinkedList<>();
         hotWaters.add(nescafe);
         hotWaters.add(jacobs);
@@ -60,7 +61,8 @@ public class Main {
         List<Product> list1 = hotWaters.stream().sorted().toList();
         System.out.println(list1);
 
-
+        Scanner in = new Scanner(System.in);
+        in.nextLine();
 //        System.out.println(hwvm.getProduct());
 //        System.out.println(hwvm.getProduct());
 //        System.out.println(hwvm.getProduct());
