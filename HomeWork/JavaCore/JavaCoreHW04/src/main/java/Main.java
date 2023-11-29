@@ -1,11 +1,30 @@
+import exception.CustomIllegalArgumentException;
+import exception.CustomInsufficientFundsException;
+import model.CreditAccount;
+import model.DebitAccount;
+
 public class Main {
     public static void main(String[] args) {
         try {
-            DebitAccount account1 = DebitAccount.create(5);
-            account1.deposit = 234;
-            Account account2 = DebitAccount.create(1000);
+            DebitAccount debitAccount = DebitAccount.create(5);
+            debitAccount.makeDebit(1000);
+            debitAccount.printBalance();
+            debitAccount.makeWithdrawal(900);
+            debitAccount.printBalance();
+
+            CreditAccount creditAccount = CreditAccount.create(0);
+            creditAccount.makeWithdrawal(6000);
+            creditAccount.printBalance();
+//            creditAccount.makeDebit(5000);
+//            creditAccount.printBalance();
+            creditAccount.makeWithdrawal(12000);
+            creditAccount.printBalance();
+
         } catch (CustomIllegalArgumentException ex){
             System.out.println("Попытка ввода отрицательного баланса");
+        } catch (CustomInsufficientFundsException e) {
+            System.out.printf("%s Баланс = %d. Лимит = %d",
+                    e.getMessage(), e.getFirstArgument(), e.getSecondArgument());
         }
 
     }
