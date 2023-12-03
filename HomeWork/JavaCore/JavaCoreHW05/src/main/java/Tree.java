@@ -27,29 +27,26 @@ public class Tree {
         if (files == null)
             return;
 
+        int subFileTotal = 0;
         int subDirTotal = 0;
+
         for (int i = 0; i < files.length; i++){
             if (files[i].isDirectory())
                 subDirTotal++;
+            else {
+                subFileTotal++;
+            }
         }
 
+        int subFileCounter = 0;
         int subDirCounter = 0;
+
         for (int i = 0; i < files.length; i++){
             if (files[i].isDirectory()){
                 print(files[i], indent, subDirTotal == ++subDirCounter);
-            }
-        }
-        int subFileTotal = 0;
-        for (int i = 0; i < files.length; i++){
-            if (files[i].isFile())
-                subFileTotal++;
-        }
-        int subFileCounter = 0;
-        for (int i = 0; i < files.length; i++){
-            if (files[i].isFile()){
-                print(files[i], indent, subFileTotal == ++subFileCounter);
+            } else {
+                print(files[i], indent, subFileTotal == ++subFileCounter && subDirTotal == subDirCounter);
             }
         }
     }
-
 }
