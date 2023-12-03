@@ -6,6 +6,7 @@ public class DebitAccount extends Account {
 
     private DebitAccount(int balance) {
         super(balance);
+        super.isCredit = false;
     }
 
     /**
@@ -32,7 +33,8 @@ public class DebitAccount extends Account {
         if(amount < this.balance) {
             this.balance -= amount;
         } else {
-            throw new CustomInsufficientFundsException("Недостаточно средств");
+            throw new CustomInsufficientFundsException(String.format("Недостаточно средств! Баланс = %d, " +
+                    "сумма снятия = %d", balance, amount));
         }
     }
 
@@ -51,10 +53,6 @@ public class DebitAccount extends Account {
 
     //endregion
 
-
-    public int getBalance() {
-        return balance;
-    }
 
     @Override
     public void printBalance() {

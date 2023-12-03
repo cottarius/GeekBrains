@@ -5,21 +5,21 @@ import exception.CustomInsufficientFundsException;
 
 public class CreditAccount extends Account {
     private final String typeOfAccount = "Credit Account";
-    private final int limit;
 
-    private CreditAccount(int balance) {
-        super(balance);
-        this.limit = 10000;
+    private CreditAccount(int balance, int limit) {
+        super(balance, limit);
+        super.isCredit = true;
     }
 
-    public static CreditAccount create(int balance) throws CustomIllegalArgumentException {
+    public static CreditAccount create(int balance, int limit) throws CustomIllegalArgumentException {
         if (balance >= 0) {
-            return new CreditAccount(balance);
+            return new CreditAccount(balance, limit);
         } else {
             throw new CustomIllegalArgumentException("Попытка ввода отрицательного лимита");
         }
     }
 
+    //region Methods
     /**
      * Пополнение счёта
      * @param amount сумма внесения
@@ -47,7 +47,7 @@ public class CreditAccount extends Account {
                         balance, -limit);
             }
         } else {
-            if(balance + limit > amount){
+            if(balance + limit >= amount){
                 balance -= amount;
             } else {
                 throw new CustomInsufficientFundsException(String.format("Превышен лимит \"%s\".", typeOfAccount),
@@ -55,6 +55,7 @@ public class CreditAccount extends Account {
             }
         }
     }
+    //endregion
 
     @Override
     public void printBalance() {
