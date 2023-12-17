@@ -14,7 +14,7 @@ public class ServerWindow extends JFrame {
     private final JButton btnStop = new JButton("Stop");
     private final JTextArea serverLog = new JTextArea();
     private boolean isServerWorking;
-    private String fileLogs = "logs.log";
+    private String fileLogs = "logs.txt";
     private List<ClientGUI> clientList = new ArrayList<>();
 
     public ServerWindow(){
